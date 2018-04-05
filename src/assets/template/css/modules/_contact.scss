@@ -2,7 +2,6 @@
   margin-bottom: 13px;
   margin-top: 8px;
   &__item{
-    float: left;
     width: 100%;
     padding-left: 36px;
     font-size: 14px;
@@ -24,21 +23,29 @@
   &__caption{
     float: left;
     color: #373737;
+    line-height: 120%;
+    margin-right: 14px;
   }
   &__value{
-    float: left;
+    overflow: hidden;
     color: #787878;
-    padding-left: 14px;
+    line-height: 120%;
+    //padding-left: 4px;
     a{
       text-decoration: none;
       color: #787878;
     }
+    @media ($bp-larger-than-phablet) {
+      //padding-left: 14px;
+    }
   }
 }
 .contacts-ur{
-  margin-bottom: 56px;
+  margin-bottom: 40px;
+  @media ($bp-larger-than-phablet) {
+    margin-bottom: 56px;
+  }
   &__item{
-    float: left;
     width: 100%;
     padding-left: 36px;
     font-family: "Open Sans", sans-serif;
@@ -67,23 +74,30 @@
 }
 
 .contacts-address{
-  float: right;
+  //float: right;
   margin-bottom: 16px;
   width: 267px;
   height: 33px;
   border-radius: 20px;
-  display: inline-block;
+  display: block;
   text-align: center;
   font-size: 14px;
   line-height: 33px;
   text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
   &:hover{
     color: #373737;
   }
+  @media ($bp-larger-than-phablet){
+    float: right;
+  }
 }
 .contacts-map{
-  img{
+  img {
     width: 100%;
+    height: 353px;
+    @media ($bp-larger-than-mobile) {
+    }
   }
-
 }

@@ -6,28 +6,46 @@
     margin-bottom: 40px;
   }
   &__name {
-    float: left;
-    width: 31%;
-    font-size: 24px;
+    font-size: 22px;
     text-transform: uppercase;
     color: #373737;
+    margin-bottom: 20px;
+    text-align: center;
+    @media ($bp-larger-than-mobile ) {
+      font-size: 24px;
+      text-align: left;
+    }
+    @media ($bp-larger-than-desktop ) {
+      float: left;
+      width: 31%;
+      margin-bottom: 0;
+    }
   }
   &__advantages {
-    float: right;
-    width: 69%;
     font-size: 13px;
     color: #373737;
     text-transform: uppercase;
     line-height: 20px;
     font-weight: 600;
     letter-spacing: 0.3px;
+    @media ($bp-larger-than-desktop ) {
+      float: right;
+      width: 69%;
+    }
   }
   &__advantage {
-    float: left;
     padding-left: 60px;
+    margin-bottom: 15px;
+    @media ($bp-larger-than-tablet ) {
+      float: left;
+      margin-bottom: 0;
+    }
     &--garant {
-      width: 32%;
+      width: 200px;
       position: relative;
+      @media ($bp-larger-than-tablet ) {
+        width: 32%;
+      }
       &:before {
         position: absolute;
         content: "";
@@ -38,8 +56,11 @@
       }
     }
     &--cooperation {
-      width: 40%;
+      width: 200px;
       position: relative;
+      @media ($bp-larger-than-tablet ) {
+        width: 40%;
+      }
       &:before {
         position: absolute;
         content: "";
@@ -50,8 +71,11 @@
       }
     }
     &--support {
-      width: 28%;
+      width: 200px;
       position: relative;
+      @media ($bp-larger-than-tablet ) {
+        width: 28%;
+      }
       &:before {
         position: absolute;
         content: "";
@@ -66,13 +90,17 @@
     margin-bottom: 6px;
   }
   &__info {
-    float: left;
-    width: 30%;
+    @media ($bp-larger-than-tablet ) {
+      float: left;
+      width: 30%;
+    }
   }
   &__message {
-    float: right;
-    width: 70%;
-    padding-left: 15px;
+    @media ($bp-larger-than-tablet ) {
+      float: right;
+      width: 70%;
+      padding-left: 15px;
+    }
     textarea {
       height: 145px;
       width: 100%;
@@ -90,7 +118,10 @@
     }
   }
   &__button {
-    text-align: right;
+    text-align: center;
+    @media ($bp-larger-than-tablet ) {
+      text-align: right;
+    }
   }
   &__btn{
     width: 136px;

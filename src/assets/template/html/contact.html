@@ -10,11 +10,12 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container container-content">
     <div class="row row__content">
         <div class="sidebar columns">
-            <div class="sidebar__inner">
-                <div class="sidebar__caption">О компании</div>
+            <a href="#" class="sidebar-btn">О компании</a>
+            <div class="sidebar__inner show-mobile">
+                <div class="sidebar__caption hidden-mobile">О компании</div>
                 <ul class="sidebar-menu">
                     <li><a href="#"><span>История компании</span></a></li>
                     <li><a href="#"><span>Производство</span></a></li>
@@ -29,7 +30,7 @@
                 </ul>
             </div>
 
-            <div class="sidebar-search">
+            <div class="sidebar-search hidden-mobile">
                 <form action="">
                     <input class="sidebar-search__input" placeholder="Поиск по каталогу" type="text">
                     <button class="sidebar-search__submit"></button>
@@ -40,24 +41,24 @@
         <div class="content columns">
             <div class="content__inner">
                 <h1>Контакты</h1>
-                    <div class="contacts-data columns">
-                        <div class="contacts-data__item contacts-data__item--address">
+                    <div class="contacts-data">
+                        <div class="contacts-data__item contacts-data__item--address row">
                             <div class="contacts-data__caption">Адрес:</div>
                             <div class="contacts-data__value">г. Тольятти ул. Коммунистическая, 100</div>
                         </div>
-                        <div class="contacts-data__item">
-                            <div class="contacts-data__caption">Телефон отдела продаж:</div>
+                        <div class="contacts-data__item row">
+                            <div class="contacts-data__caption">Телефон<br class="only-mobile"/> отдела продаж:</div>
                             <div class="contacts-data__value">
-                                <a href="tel:88005005569" class="contacts-data__value">8 800 500 55 69</a>
+                                <a href="tel:88005005569" class="contacts-data__value"><br class="only-mobile"/>8 800 500 55 69</a>
                             </div>
                         </div>
-                        <div class="contacts-data__item">
+                        <div class="contacts-data__item row">
                             <div class="contacts-data__caption">Приемная:</div>
                             <div class="contacts-data__value">
                                 <a href="tel:+79455005569" >+7 (945) 500 55 69</a>
                             </div>
                         </div>
-                        <div class="contacts-data__item">
+                        <div class="contacts-data__item row">
                             <div class="contacts-data__caption">Почта:</div>
                             <div class="contacts-data__value">
                                 <a href="mailto:mail@mail.ru">mail@mail.ru</a>
@@ -65,8 +66,8 @@
                         </div>
                     </div>
 
-                    <div class="contacts-ur columns">
-                        <div class="contacts-ur__item">
+                    <div class="contacts-ur">
+                        <div class="contacts-ur__item row">
                             <div class="contacts-ur__caption">Юридическое лицо:</div>
                             <div class="contacts-ur__value">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

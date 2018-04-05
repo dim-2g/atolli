@@ -100,7 +100,8 @@
 .sortpanel{
   padding: 5px 0 15px;
   border-bottom: 1px solid #d3d3d3;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+
   &__box{
     float: right;
     text-align: right;
@@ -123,6 +124,11 @@
       @include sprite($list);
       display: inline-block;
     }
+    &.active{
+      &:before{
+        @include sprite($list-active);
+      }
+    }
     &:hover{
       &:before{
         @include sprite($list-active);
@@ -137,8 +143,18 @@
     vertical-align: middle;
     &:before {
       content: "";
-      @include sprite($grid-active);
+      @include sprite($grid);
       display: inline-block;
+    }
+    &.active{
+      &:before{
+        @include sprite($grid-active);
+      }
+    }
+    &:hover{
+      &:before{
+        @include sprite($grid-active);
+      }
     }
   }
 }

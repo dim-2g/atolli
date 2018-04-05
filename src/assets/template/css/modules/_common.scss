@@ -21,7 +21,7 @@ a{
   float: left;
   width: auto;
   position: relative;
-  z-index: 10;
+  z-index: 100;
   &__list{
     list-style-type: none;
     margin: 0;
@@ -387,6 +387,7 @@ a{
         padding: 15px;
         border: 1px solid #d7d7d7;
         min-width: 256px;
+        box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.23);
         li{
           display: block;
         }
@@ -394,30 +395,46 @@ a{
     }
   }
 }
+
 .footer-logo{
   width: 200px;
-  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: top;
+  margin-bottom: 20px;
+  text-align: center;
+  @media ($bp-larger-than-tablet) {
+    display: table-cell;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
   @media ($bp-larger-than-desktop) {
-    width: 18%;
+    width: 223px;
   }
 
 }
 .footer-copyright{
   color: #787878;
-  text-align: left;
   font-size: 13px;
   margin-top: 19px;
-  margin-left: 25px;
+  text-align: center;
   letter-spacing: -0.8px;
+  @media ($bp-larger-than-tablet) {
+    margin-left: 25px;
+    text-align: left;
+  }
 }
 .footer-menu{
-  float: left;
-  width: auto;
-  @media ($bp-larger-than-desktop) {
-    width: 64%;
-  }
-  @media ($bp-larger-than-1250) {
-    width: 66%;
+  vertical-align: top;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  @media ($bp-larger-than-tablet) {
+    display: table-cell;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
   }
   &__box{
     @media ($bp-larger-than-desktop) {
@@ -459,6 +476,10 @@ a{
         z-index: 10;
         box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.23);
         margin-bottom: 20px;
+        //left: 0;
+        @media ($bp-larger-than-phablet) {
+          //left: auto;
+        }
       }
       .footer-menu__list{
         min-width: 170px;
@@ -493,10 +514,13 @@ a{
     font-size: 14px;
     height: 35px;
     letter-spacing: -0.2px;
+    text-align: center;
+    @media ($bp-larger-than-phablet) {
+      text-align: left;
+    }
     a{
       text-decoration: none;
       color: #373737;
-      padding-right: 20px;
       position: relative;
       @media ($bp-larger-than-desktop) {
         padding-right: 0;
@@ -516,16 +540,26 @@ a{
 .footer{
   border-top: 1px solid #d3d3d3;
   padding-top: 26px;
+  &__box{
+    @media ($bp-larger-than-tablet) {
+      display: table;
+      width: 100%;
+    }
+  }
+
   &__contacts{
-    float: right;
-    width: 200px;
+    vertical-align: top;
     color: #373737;
     font-size: 12px;
-    @media ($bp-larger-than-desktop) {
-      width: 18%;
+    margin-left: auto;
+    margin-right: auto;
+    @media ($bp-larger-than-mobile) {
+      width: 200px;
     }
-    @media ($bp-larger-than-1250) {
-      width: 16%;
+    @media ($bp-larger-than-tablet) {
+      display: table-cell;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   &__phone{
@@ -549,9 +583,17 @@ a{
     }
   }
   &__time{
+    float: right;
+    width: 85px;
+    margin-top: -31px;
     line-height: 125%;
     margin-left: 6px;
     margin-bottom: 13px;
+    @media ($bp-larger-than-mobile) {
+      margin-top: 0;
+      float: none;
+      width: auto;
+    }
   }
   &__social{
     margin-left: 12px;
@@ -565,7 +607,7 @@ a{
     border-radius: 50%;
     border: 1px solid #a0a0a0;
     text-align: center;
-    line-height: 42px;
+    line-height: 47px;
     vertical-align: top;
     &--vk{
       &:before{
@@ -636,7 +678,7 @@ a{
     text-align: center;
     cursor: pointer;
     outline: none;
-    z-index: 100;
+    z-index: 1;
     border: 1px solid #cfcfcf;
     background-color: #f1f1f1;
     transition: $anim;
@@ -687,6 +729,10 @@ a{
   z-index: 100;
   top: -60px;
   transition: $anim;
+  display: none;
+  @media ($bp-larger-than-desktop) {
+    display: block;
+  }
   &__cart {
     width: 136px;
     height: 33px;
@@ -930,4 +976,38 @@ select.selectric{
 }
 .aside-filter__checkbox{
   margin-bottom: 16px;
+}
+
+.container-content {
+ // background-color: #fff;
+  @media ($bp-larger-than-tablet) {
+    background-color: transparent;
+  }
+}
+.only-mobile{
+  display: inline;
+  @media ($bp-larger-than-phablet) {
+    display: none;
+  }
+}
+.list {
+  list-style-type: none;
+  margin-bottom: 50px;
+  li {
+    padding-left: 15px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: #787878;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #0195c0;
+      top: 8px;
+      left: 2px;
+    }
+  }
 }

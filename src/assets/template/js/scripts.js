@@ -72,7 +72,54 @@ $(function() {
        $(this).parents('.footer-menu__box').toggleClass('open');
        return false;
     });
+    $('.sidebar-btn').click(function(){
+        $('.sidebar').toggleClass('open');
+        return false;
+    })
 
+    $('.zoom').magnificPopup({
+        type  : 'image'
+    });
+
+    $('.product-image__list').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.product-previews'
+    });
+    $('.product-previews').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product-image__list',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        vertical: true,
+        centerPadding: '20px',
+        infinite: true,
+        arrows: false,
+        variableWidth: false,
+        responsive: [
+            {
+                breakpoint: 750,
+                settings: {
+                    vertical: false
+                }
+            }
+        ]
+    });
+
+
+    $('[data-tab]').click(function(){
+        $('[data-tab]').removeClass('active');
+        $(this).addClass('active');
+
+        var data_tab = $(this).attr('data-tab');
+        $('.tab').removeClass('active');
+        $(data_tab).addClass('active');
+        return false;
+    });
 
     //заадем высоту хедеру, чтобы при установки позиции фиксед не дергался сайт
     setHeightHeader = function(){

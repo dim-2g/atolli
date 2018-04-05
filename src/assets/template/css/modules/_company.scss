@@ -8,28 +8,109 @@
   margin-right: -8px;
 }
 .sidebar{
-  width: 25%;
+  width: 288px;
   padding: 0 8px;
+  margin-bottom: 15px;
+  @media ($bp-larger-than-desktop ) {
+    display: block;
+    width: 25%;
+  }
+  >*{
+    display: none;
+    @media ($bp-larger-than-desktop ) {
+      display: block;
+    }
+  }
   &__caption{
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     color: #3a3a3a;
-    margin-bottom: 15px;
+    position: relative;
+    @media ($bp-larger-than-desktop ) {
+      margin-bottom: 15px;
+    }
+
   }
   &__inner{
     background-color: #fff;
     padding: 17px 27px 12px 17px;
     margin-bottom: 15px;
   }
+  &.open{
+    position: relative;
+    z-index: 2;
+    .show-mobile{
+      display: block;
+      &.sidebar__inner{
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.23);
+        padding-top: 50px;
+        top: 0px;
+        min-width: 275px;
+      }
+      &.aside-filter{
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.23);
+        padding-top: 50px;
+        top: 0px;
+        min-width: 275px;
+      }
+    }
+    .hidden-mobile{
+      display: none;
+    }
+    .sidebar-btn{
+      &:after{
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.sidebar-btn{
+  display: block;
+  position: relative;
+  z-index: 205;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #3a3a3a;
+  background-color: #fff;
+  text-decoration: none;
+  @media ($bp-larger-than-desktop ) {
+    display: none;
+  }
+  &:after{
+    display: inline-block;
+    @include sprite($sidebar-right-arrow);
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -8px;
+    transition: $anim;
+  }
 }
 .content{
-  width: 75%;
+  width: 100%;
   padding: 0 8px;
+  @media ($bp-larger-than-desktop ) {
+    width: 75%;
+  }
   &__inner{
     background-color: #fff;
-    padding: 5px 32px 50px 32px;
+    padding: 5px 20px 20px 20px;
     margin-bottom: 42px;
+    margin-left: -20px;
+    margin-right: -20px;
+    @media ($bp-larger-than-mobile) {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 5px 32px 50px 32px;
+    }
     p{
       font-family: "Open Sans", sans-serif;
       font-size: 13px;
@@ -68,6 +149,13 @@
           display: inline-block;
         }
       }
+    }
+    &.sidebar-menu__item{
+        font-size: 13px;
+        color: #787878;
+        padding: 1px 17px;
+      height: 40px;
+      line-height: 36px;
     }
     a{
       display: block;
@@ -109,7 +197,7 @@
   &__input{
     width: 100%;
     font-size: 13px;
-    color: #9b9b9b;
+    color: #373737;
 
   }
   &__submit{

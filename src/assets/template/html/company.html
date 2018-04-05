@@ -12,8 +12,9 @@
 <div class="container">
     <div class="row row__content">
         <div class="sidebar columns">
-            <div class="sidebar__inner">
-                <div class="sidebar__caption">О компании</div>
+            <a href="#" class="sidebar-btn">О компании</a>
+            <div class="sidebar__inner show-mobile">
+                <div class="sidebar__caption hidden-mobile">О компании</div>
                 <ul class="sidebar-menu">
                     <li class="active"><a href="#"><span>История компании</span></a></li>
                     <li><a href="#"><span>Производство</span></a></li>
@@ -28,7 +29,7 @@
                 </ul>
             </div>
 
-            <div class="sidebar-search">
+            <div class="sidebar-search hidden-mobile">
                 <form action="">
                     <input class="sidebar-search__input" placeholder="Поиск по каталогу" type="text">
                     <button class="sidebar-search__submit"></button>

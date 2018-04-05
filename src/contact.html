@@ -77,11 +77,12 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container container-content">
     <div class="row row__content">
         <div class="sidebar columns">
-            <div class="sidebar__inner">
-                <div class="sidebar__caption">О компании</div>
+            <a href="#" class="sidebar-btn">О компании</a>
+            <div class="sidebar__inner show-mobile">
+                <div class="sidebar__caption hidden-mobile">О компании</div>
                 <ul class="sidebar-menu">
                     <li><a href="#"><span>История компании</span></a></li>
                     <li><a href="#"><span>Производство</span></a></li>
@@ -96,7 +97,7 @@
                 </ul>
             </div>
 
-            <div class="sidebar-search">
+            <div class="sidebar-search hidden-mobile">
                 <form action="">
                     <input class="sidebar-search__input" placeholder="Поиск по каталогу" type="text">
                     <button class="sidebar-search__submit"></button>
@@ -107,24 +108,24 @@
         <div class="content columns">
             <div class="content__inner">
                 <h1>Контакты</h1>
-                    <div class="contacts-data columns">
-                        <div class="contacts-data__item contacts-data__item--address">
+                    <div class="contacts-data">
+                        <div class="contacts-data__item contacts-data__item--address row">
                             <div class="contacts-data__caption">Адрес:</div>
                             <div class="contacts-data__value">г. Тольятти ул. Коммунистическая, 100</div>
                         </div>
-                        <div class="contacts-data__item">
-                            <div class="contacts-data__caption">Телефон отдела продаж:</div>
+                        <div class="contacts-data__item row">
+                            <div class="contacts-data__caption">Телефон<br class="only-mobile"/> отдела продаж:</div>
                             <div class="contacts-data__value">
-                                <a href="tel:88005005569" class="contacts-data__value">8 800 500 55 69</a>
+                                <a href="tel:88005005569" class="contacts-data__value"><br class="only-mobile"/>8 800 500 55 69</a>
                             </div>
                         </div>
-                        <div class="contacts-data__item">
+                        <div class="contacts-data__item row">
                             <div class="contacts-data__caption">Приемная:</div>
                             <div class="contacts-data__value">
                                 <a href="tel:+79455005569" >+7 (945) 500 55 69</a>
                             </div>
                         </div>
-                        <div class="contacts-data__item">
+                        <div class="contacts-data__item row">
                             <div class="contacts-data__caption">Почта:</div>
                             <div class="contacts-data__value">
                                 <a href="mailto:mail@mail.ru">mail@mail.ru</a>
@@ -132,8 +133,8 @@
                         </div>
                     </div>
 
-                    <div class="contacts-ur columns">
-                        <div class="contacts-ur__item">
+                    <div class="contacts-ur">
+                        <div class="contacts-ur__item row">
                             <div class="contacts-ur__caption">Юридическое лицо:</div>
                             <div class="contacts-ur__value">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -156,24 +157,37 @@
 
 <div class="footer">
     <div class="container">
-        <div class="footer-logo columns">
-            <a href="/" class="footer-logo__image"><img src="/assets/template/images/logo-footer.png" alt=""></a>
-            <div class="footer-copyright">© volga.ru 2018</div>
-        </div>
-        <div class="columns footer-menu">
+        <div class="footer__box">
+            <div class="footer-logo">
+                <a href="/" class="footer-logo__image"><img src="/assets/template/images/logo-footer.png" alt=""></a>
+                <div class="footer-copyright">© volga.ru 2018</div>
+            </div>
+            <div class="footer-menu">
 
-            <div class="footer-menu__box footer-menu__box--about">
-                <div class="footer-menu__caption">
-                    <a href="#">О компании</a>
+                <div class="footer-menu__box footer-menu__box--about">
+                    <div class="footer-menu__caption">
+                        <a href="#">О компании</a>
+                    </div>
+                    <div class="footer-menu__body">
+                        <ul class="footer-menu__list">
+                            <li><a href="#">История компании</a></li>
+                            <li><a href="#">Производство</a></li>
+                            <li><a href="#">Линия "Стандарт"</a></li>
+                            <li><a href="#">Линия "Комфорт"</a></li>
+                            <li><a href="#">Линия "Премиум"</a></li>
+                        </ul>
+                        <ul class="footer-menu__list">
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Отзывы и рекомендации</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-menu__body">
-                    <ul class="footer-menu__list">
-                        <li><a href="#">История компании</a></li>
-                        <li><a href="#">Производство</a></li>
-                        <li><a href="#">Линия "Стандарт"</a></li>
-                        <li><a href="#">Линия "Комфорт"</a></li>
-                        <li><a href="#">Линия "Премиум"</a></li>
-                    </ul>
+                <!--div class="footer-menu__box footer-menu__box--about2">
+                    <div class="footer-menu__caption">
+                    </div>
                     <ul class="footer-menu__list">
                         <li><a href="#">Сертификаты</a></li>
                         <li><a href="#">Отзывы и рекомендации</a></li>
@@ -181,62 +195,51 @@
                         <li><a href="#">Контакты</a></li>
                         <li><a href="#">Политика конфиденциальности</a></li>
                     </ul>
+                </div-->
+                <div class="footer-menu__box footer-menu__box--buyers">
+                    <div class="footer-menu__caption">
+                        <a href="#">Покупателям</a>
+                    </div>
+                    <div class="footer-menu__body">
+                        <ul class="footer-menu__list">
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Как заказать</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Обмен и возврат</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <!--div class="footer-menu__box footer-menu__box--about2">
-                <div class="footer-menu__caption">
+                <div class="footer-menu__box footer-menu__box--partners">
+                    <div class="footer-menu__caption">
+                        <a href="#">Оптовым партнерам</a>
+                    </div>
+                    <div class="footer-menu__body">
+                        <ul class="footer-menu__list">
+                            <li><a href="#">Условия сотрудничества (для оптовиков)</a></li>
+                            <li><a href="#">Доставка оптовикам</a></li>
+                            <li><a href="#">Дистрибьютерская сеть</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="footer-menu__list">
-                    <li><a href="#">Сертификаты</a></li>
-                    <li><a href="#">Отзывы и рекомендации</a></li>
-                    <li><a href="#">Вакансии</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Политика конфиденциальности</a></li>
-                </ul>
-            </div-->
-            <div class="footer-menu__box footer-menu__box--buyers">
-                <div class="footer-menu__caption">
-                    <a href="#">Покупателям</a>
-                </div>
-                <div class="footer-menu__body">
-                    <ul class="footer-menu__list">
-                        <li><a href="#">Доставка и оплата</a></li>
-                        <li><a href="#">Как заказать</a></li>
-                        <li><a href="#">Гарантия</a></li>
-                        <li><a href="#">Обмен и возврат</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-menu__box footer-menu__box--partners">
-                <div class="footer-menu__caption">
-                    <a href="#">Оптовым партнерам</a>
-                </div>
-                <div class="footer-menu__body">
-                    <ul class="footer-menu__list">
-                        <li><a href="#">Условия сотрудничества (для оптовиков)</a></li>
-                        <li><a href="#">Доставка оптовикам</a></li>
-                        <li><a href="#">Дистрибьютерская сеть</a></li>
-                    </ul>
-                </div>
+
             </div>
 
-        </div>
+            <div class="footer__contacts">
+                <div class="footer__col-height">
+                    <div class="footer__contacts-group">
+                        <div class="footer__phone">
+                            <a href="tel:88005005569">8 800 500 55 69</a>
+                        </div>
+                        <div class="footer__time">
+                            Время работы консультанта 09.00 - 23.00
+                        </div>
+                        <div class="footer__social">
+                            <a href="#" class="social__link social__link--vk"></a>
+                            <a href="#" class="social__link social__link--fb"></a>
+                            <a href="#" class="social__link social__link--ok"></a>
+                        </div>
 
-        <div class="columns footer__contacts">
-            <div class="footer__col-height">
-                <div class="footer__contacts-group">
-                    <div class="footer__phone">
-                        <a href="tel:88005005569">8 800 500 55 69</a>
                     </div>
-                    <div class="footer__time">
-                        Время работы консультанта 09.00 - 23.00
-                    </div>
-                    <div class="footer__social">
-                        <a href="#" class="social__link social__link--vk"></a>
-                        <a href="#" class="social__link social__link--fb"></a>
-                        <a href="#" class="social__link social__link--ok"></a>
-                    </div>
-
                 </div>
             </div>
         </div>

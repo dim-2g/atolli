@@ -5,13 +5,29 @@ width: 100%;
     margin-right: -3px;
     margin-bottom: 40px;
     margin-top: 40px;
+    text-align: center;
+    font-size: 0;
   }
   &__item{
-    float: left;
-    width: 16.6%;
+    //float: left;
+    display: inline-block;
+    width: 100%;
     padding: 0 3px;
     margin-bottom: 4px;
     font-size: 0;
+    float: none;
+    @media ($bp-larger-than-mobile){
+      width: 50%;
+    }
+    @media ($bp-larger-than-phablet) {
+      width: 33%;
+    }
+    @media ($bp-larger-than-desktop ) {
+      width: 25%;
+    }
+    @media ($bp-larger-than-1170) {
+      width: 16.6%;
+    }
   }
   &__card{
     background-position: center;
@@ -63,14 +79,18 @@ width: 100%;
   &__list{
     margin-left: -3px;
     margin-right: -3px;
+    font-size: 0;
+    text-align: center;
   }
-  &__item{
-    float: left;
+  &__item {
     width: 100%;
     padding: 0 3px;
     margin-bottom: 4px;
-    font-size: 0;
-    @media($bp-larger-than-desktop){
+    display: inline-block;
+    @media ($bp-larger-than-phablet) {
+      width: 50%;
+    }
+    @media($bp-larger-than-desktop) {
       width: 33.3%;
     }
   }
@@ -88,6 +108,7 @@ width: 100%;
     &:hover{
       box-shadow: 0 0 5px 0 rgba(0,0,0,0.9);
     }
+
   }
   &__caption {
     display: inline-block;
@@ -173,6 +194,13 @@ width: 100%;
 .mainpage-text{
   width: 100%;
   font-family: "Open Sans", sans-serif;
+  margin-bottom: 40px;
+  @media ($bp-larger-than-desktop){
+    margin-bottom: 0px;
+  }
+  @media ($bp-larger-than-mobile){
+    margin-bottom: 80px;
+  }
   h3{
     font-size: 20px;
     color: #3a3a3a;
@@ -184,19 +212,29 @@ width: 100%;
     text-transform: uppercase;
   }
   &__item{
-    float: left;
-    width: 50%;
+
+    width: 100%;
     color: #777777;
     font-size: 13px;
-    text-align: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    text-align: left;
     line-height: 177%;
-    margin-bottom: 28px;
+    margin-bottom: 0px;
+    @media ($bp-larger-than-phablet) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media ($bp-larger-than-desktop) {
+      width: 50%;
+      float: left;
+      text-align: center;
+      margin-bottom: 28px;
+    }
   }
 }
 .row__two-columns{
-  margin-left: -30px;
-  margin-right: -30px;
+  @media ($bp-larger-than-phablet) {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
 }
 
