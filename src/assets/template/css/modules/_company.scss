@@ -4,14 +4,18 @@
 
 
 .row__content{
-  margin-left: -8px;
-  margin-right: -8px;
+  //margin-left: -8px;
+  //margin-right: -8px;
 }
 .sidebar{
-  width: 288px;
-  padding: 0 8px;
+  padding: 0 20px;
   margin-bottom: 15px;
+  @media ($bp-larger-than-mobile ) {
+    padding: 0;
+    width: 288px;
+  }
   @media ($bp-larger-than-desktop ) {
+    padding: 0 8px;
     display: block;
     width: 25%;
   }
@@ -96,19 +100,20 @@
 }
 .content{
   width: 100%;
-  padding: 0 8px;
+
   @media ($bp-larger-than-desktop ) {
     width: 75%;
+    padding: 0 8px;
   }
   &__inner{
     background-color: #fff;
     padding: 5px 20px 20px 20px;
     margin-bottom: 42px;
-    margin-left: -20px;
-    margin-right: -20px;
+    //margin-left: -20px;
+    //margin-right: -20px;
     @media ($bp-larger-than-mobile) {
-      margin-left: 0;
-      margin-right: 0;
+      //margin-left: 0;
+      //margin-right: 0;
       padding: 5px 32px 50px 32px;
     }
     p{

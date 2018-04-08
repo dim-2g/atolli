@@ -96,8 +96,8 @@ $(function() {
         centerMode: true,
         focusOnSelect: true,
         vertical: true,
-        centerPadding: '20px',
-        infinite: true,
+        //centerPadding: '20px',
+        //infinite: true,
         arrows: false,
         variableWidth: false,
         responsive: [

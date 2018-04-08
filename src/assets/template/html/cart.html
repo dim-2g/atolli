@@ -1,0 +1,206 @@
+//= include/header.html
+
+<div class="crumbs">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/">Главная</a></li>
+            <li class="active">Корзина</li>
+        </ul>
+    </div>
+</div>
+
+<div class="order-cart">
+    <div class="container">
+        <div class="order-cart__inner">
+            <h1 class="header1">Корзина</h1>
+            <div class="order-cart__table">
+                <div class="order-cart__row order-cart__row-header">
+                    <div class="order-cart__name-header" colspan="2">Наименование</div>
+                    <div class="order-cart__params-header">Параметры</div>
+                    <div class="order-cart__quontity-header">Количество</div>
+                    <div class="order-cart__price-header">Цена</div>
+                    <div class="order-cart__delete-header"></div>
+                </div>
+                //= include/cart-row.html
+                //= include/cart-row.html
+                //= include/cart-row.html
+
+            </div>
+            <div class="row">
+                <div class="order-cart__cost">
+                    ИТОГО: <span class="order-cart__cost-value">2 280</span> <span class="order-cart__cost-currency">р.</span>
+                    <div class="order-cart__cost-delivery">Цена, без учета стоимости доставки</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="order-delivery">
+    <div class="container">
+        <div class="order-delivery__inner">
+            <div class="header1">Доставка</div>
+            <div class="order-delivery__region region-line">
+                <div class="region-line__label">Ваш регион доставки</div>
+                <div class="region-line__select">
+                    <select name="" id="" class="selectric">
+                        <option value="">Выберите регион доставки</option>
+                        <option value="1">Москва</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row order-delivery__item">
+                <div class="order-delivery__info">
+                    <label class="order-delivery__checkbox">
+                        <input name="q2" type="checkbox" class="checkbox">
+                        <span class="checkbox-custom"></span>
+                        <span class="label order-delivery__text">
+                            Доставка курьером СДЕК
+                            <span class="order-delivery__date">Срок доставки: 3-4 дня</span>
+                        </span>
+                    </label>
+                    <div class="order-delivery__time">
+                        <span class="order-delivery__time-text">Выберите время доставки:</span>
+                        <select name="" id="" class="selectric">
+                            <option value=""></option>
+                            <option value="1">12:00-15:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="order-delivery__cost">
+                    Цена доставки: <span class="order-delivery__price-value">200</span> <span class="order-delivery__price-currency">р</span>
+                </div>
+            </div>
+            <div class="row order-delivery__item">
+                <div class="order-delivery__info">
+                    <label class="order-delivery__checkbox">
+                        <input name="q2" type="checkbox" class="checkbox">
+                        <span class="checkbox-custom"></span>
+                        <span class="label order-delivery__text">
+                            Пункты самовывоза СДЭК
+                            <span class="order-delivery__date">Срок доставки: 3-4 дня</span>
+                        </span>
+                    </label>
+                    <div class="order-delivery__time">
+                        <span class="order-delivery__time-text">Выберите время доставки:</span>
+                        <select name="" id="" class="selectric">
+                            <option value=""></option>
+                            <option value="1">12:00-15:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="order-delivery__cost">
+                    Цена доставки: <span class="order-delivery__price-value">200</span> <span class="order-delivery__price-currency">р.</span>
+                </div>
+            </div>
+
+            <div class="row order-delivery__item order-delivery__item-total">
+                <div class="row">
+                    <div class="order-delivery__box">
+                        <div class="order-delivery__add-decription">
+                            Заказы на пункты самовывоза отправляются только по полной предоплате.
+                        </div>
+                        <div class="order-delivery__add-decription">
+                            Заказы курьерской доставкой до двери, возможно оплатить наличными курьеру.
+                        </div>
+                    </div>
+                    <div class="order-delivery__prices">
+                        <div class="order-delivery__add-cost">
+                            <span class="order-delivery__costlabel">Цена продукции:</span><span class="order-delivery__price-value">2 280</span> <span class="order-delivery__price-currency">р.</span>
+                        </div>
+                        <div class="order-delivery__add-cost">
+                            <span class="order-delivery__costlabel">Цена доставки:</span> <span class="order-delivery__price-value">200</span> <span class="order-delivery__price-currency">р.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="order-delivery__summa-box">
+                    ОБЩАЯ СТОИМОСТЬ: <span class="order-delivery__summa"><span class="order-delivery__summa-value">2 480</span> <span class="order-delivery__currency">р.</span></span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="data-recipient">
+    <div class="container">
+        <div class="data-recipient__inner">
+            <div class="header1">Данные получателя</div>
+
+            <div class="recipient-forma__form row">
+                <div class="recipient-forma__info">
+                    <div class="recipient-forma__item">
+                        <span>Ваше имя</span>
+                        <input type="text" name="name" placeholder="Введите Ваше имя">
+                    </div>
+                    <div class="recipient-forma__item">
+                        <span>Ваш телефон</span>
+                        <input type="text" name="phone" placeholder="Введите Ваш номер телефон">
+                    </div>
+                    <div class="recipient-forma__item">
+                        <span>Ваш e-mail</span>
+                        <input type="text" name="email" placeholder="Введите Ваш e-mail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="address-recipient">
+    <div class="container">
+        <div class="address-recipient__inner">
+            <div class="header1">Адрес получателя</div>
+            <div class="address-forma__form row">
+                <div class="address-forma__box">
+                    <div class="address-forma__item">
+                        <span>Индекс</span>
+                        <input type="text" name="index" placeholder="Введите индекс">
+                    </div>
+                    <div class="address-forma__item">
+                        <span>Область</span>
+                        <input type="text" name="region" placeholder="Введите область">
+                    </div>
+                    <div class="address-forma__item">
+                        <span>Город</span>
+                        <input type="text" name="town" placeholder="Введите город">
+                    </div>
+                </div>
+                <div class="address-forma__box">
+                    <div class="address-forma__item">
+                        <span>Индекс</span>
+                        <input type="text" name="index" placeholder="Введите индекс">
+                    </div>
+                    <div class="address-forma__item">
+                        <span>Область</span>
+                        <input type="text" name="region" placeholder="Введите область">
+                    </div>
+                    <div class="address-forma__item">
+                        <span>Город</span>
+                        <input type="text" name="town" placeholder="Введите город">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="recipient-btn">
+    <div class="container">
+        <div class="recipient-btn__inner">
+            <div class="recipient-btn__text">
+                После оформления заказа оператор свяжется с Вами для уточнения информации и консультации по форме оплаты.
+            </div>
+            <div class="recipient-forma__button row">
+                <button type="submit" class="recipient-forma__btn btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+//= include/footer.html
