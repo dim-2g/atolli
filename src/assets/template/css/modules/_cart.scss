@@ -33,12 +33,11 @@
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #d9d9d9;
-    @media($bp-larger-than-phablet) {
-      padding-bottom: 0;
-      border-bottom: 0 none;
-    }
+
     @media($bp-larger-than-tablet) {
       display: table-row;
+      padding-bottom: 0;
+      border-bottom: 0 none;
     }
     &:after{
       display: table;
@@ -163,7 +162,7 @@
   &__quontity{
     float: left;
     margin-right: 18px;
-    @media($bp-larger-than-phablet) {
+    @media($bp-larger-than-tablet) {
       float: none;
       margin-right: 0;
     }
@@ -173,17 +172,17 @@
   }
   &__price{
     float: left;
-    @media($bp-larger-than-phablet) {
+    @media($bp-larger-than-tablet) {
       float: none;
     }
   }
   &__delete{
     float: right;
-    @media($bp-larger-than-phablet) {
+    @media($bp-larger-than-tablet) {
       float: none;
     }
     .btn-delete{
-      @media($bp-larger-than-phablet) {
+      @media($bp-larger-than-tablet) {
         margin-bottom: 3px;
         vertical-align: middle;
       }
@@ -372,7 +371,7 @@
       border: 1px solid #dadada;
       background-color: #fff;
       border-radius: 0;
-      //height: 40px;
+      height: 40px;
       p{
         line-height: 26px;
       }

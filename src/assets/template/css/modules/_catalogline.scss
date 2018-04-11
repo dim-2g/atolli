@@ -58,9 +58,6 @@
   }
   &__actions{
     text-align: left;
-    @media($bp-larger-than-phablet) {
-      text-align: center;
-    }
     @media($bp-larger-than-tablet) {
       display: table-cell;
       width: 160px;
@@ -68,7 +65,7 @@
     }
     .catalog-card__submit{
       margin-top: 0;
-      @media($bp-larger-than-phablet) {
+      @media($bp-larger-than-tablet) {
         margin-top: 20px;
       }
     }
