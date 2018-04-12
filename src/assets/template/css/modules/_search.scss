@@ -5,11 +5,15 @@
 }
 .search-btn{
   background-color: #fff;
-  padding: 23px 180px 23px 26px;
+  padding: 23px 26px 23px 26px;
   position: relative;
   margin-bottom: 16px;
   height: 84px;
   display: none;
+  &__box{
+    padding-right: 154px;
+    position: relative;
+  }
   input{
     height: 39px;
     padding: 6px 18px;
@@ -34,7 +38,8 @@
     line-height: 35px;
     text-transform: uppercase;
     position: absolute;
-    right: 26px;
+    right: 0;
+    top: 0;
   }
 }
 .search-panel{

@@ -61,10 +61,13 @@ $(function() {
     });
 
     $('.header__burger').click(function(){
+        //скрываем все меню, ранее раскрытые
+        $('.open').not('.topline-menu').removeClass('open');
        $('.topline-menu').toggleClass('open');
        return false;
     });
     $('.top-menu__burger').click(function(){
+        $('.open').not('.top-menu').removeClass('open');
         $('.top-menu').toggleClass('open');
         return false;
     });
@@ -73,6 +76,7 @@ $(function() {
        return false;
     });
     $('.sidebar-btn').click(function(){
+        $('.open').not('.sidebar').removeClass('open');
         $('.sidebar').toggleClass('open');
         return false;
     })
