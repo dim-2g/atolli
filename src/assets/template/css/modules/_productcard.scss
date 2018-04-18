@@ -383,6 +383,11 @@
     }
     &--1{
       .product-advantage__card{
+        &:hover{
+            &:before {
+              @include sprite($order-active);
+            }
+          }
         &:before{
           position: absolute;
           content: "";
@@ -395,6 +400,11 @@
     }
     &--2{
       .product-advantage__card{
+        &:hover{
+          &:before {
+            @include sprite($buy-active);
+          }
+        }
         &:before{
           position: absolute;
           content: "";
@@ -407,6 +417,11 @@
     }
     &--3{
       .product-advantage__card{
+        &:hover{
+          &:before {
+            @include sprite($garante-active);
+          }
+        }
         &:before{
           position: absolute;
           content: "";
@@ -419,6 +434,11 @@
     }
     &--4{
       .product-advantage__card{
+        &:hover{
+          &:before {
+            @include sprite($original-active);
+          }
+        }
         &:before{
           position: absolute;
           content: "";
@@ -431,6 +451,11 @@
     }
     &--5{
       .product-advantage__card{
+        &:hover{
+          &:before {
+            @include sprite($town-active);
+          }
+        }
         &:before{
           position: absolute;
           content: "";
@@ -450,6 +475,10 @@
     max-width: 230px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #d7d7d7;
+    &:hover{
+      border: 1px solid #1d9fc5;
+    }
   }
   &__name{
     position: absolute;

@@ -611,12 +611,15 @@ a{
     display: inline-block;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    border: 1px solid #a0a0a0;
     text-align: center;
     line-height: 47px;
     vertical-align: top;
     &--vk{
+      &:hover{
+        &:before{
+          @include sprite($vk-active);
+        }
+      }
       &:before{
         display: inline-block;
         content: "";
@@ -624,6 +627,11 @@ a{
       }
     }
     &--fb{
+      &:hover{
+        &:before{
+          @include sprite($facebook-active);
+        }
+      }
       &:before{
         display: inline-block;
         content: "";
@@ -631,6 +639,11 @@ a{
       }
     }
     &--ok{
+      &:hover{
+        &:before{
+          @include sprite($ok-active);
+        }
+      }
       &:before{
         display: inline-block;
         content: "";
